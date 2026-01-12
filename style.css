@@ -63,22 +63,37 @@ body {
   height: auto;
 }
 .main-logo {
-  margin-bottom: 50px;
-  width: 300px; /* Logoyu tasarımına göre ayarlayabilirsin */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px; /* Yazılarla arasını tasarım gibi açalım */
+  width: 280px; /* Tasarıma göre biraz küçülttük */
 }
 
 .hero-subtitle {
   font-family: "Satisfy", cursive; /* El yazısı slogan */
   color: var(--main-yellow);
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin-bottom: 5px;
+  text-transform: lowercase;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Yazı ve butonu yatayda merkeze çeker */
+  text-align: center; /* Satırları kendi içinde ortalar */
+  color: white; /* Yazıların beyaz olması için */
 }
 
 .hero-content h1 {
-  font-family: "Roboto Condensed", sans-serif; /* Güçlü, sıkıştırılmış başlık */
-  font-weight: 700;
-  font-size: 5rem;
-  line-height: 1;
+  font-family: "Barlow", sans-serif; /* Projenin ana fontu */
+  font-weight: 400; /* Kalın font ağırlığı */
+  font-size: 4rem; /* Boyutu biraz küçülttük */
+  color: #ffffff; /* İstediğin beyaz renk */
+  line-height: 1.1;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .cta-content h2,
