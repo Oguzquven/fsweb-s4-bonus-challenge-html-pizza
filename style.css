@@ -525,25 +525,27 @@ body {
   }
 
   /* Kategori Navigasyonu (İkonlar) */
-  .category-nav {
-    display: flex;
-    flex-wrap: wrap; /* Taşınca alt satıra geçmesi için */
-    justify-content: center; /* Ortalamak için */
-    gap: 20px 0; /* Satırlar arası 20px, yan yana 0 boşluk (flex-basis ile yöneteceğiz) */
-    padding: 25px 10px;
-  }
+  @media (max-width: 768px) {
+    .category-nav {
+      display: grid;
+      /* Ekranı tam ortadan ikiye böler (eşit sütunlar) */
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      padding: 30px 40px; /* Kenarlardan biraz boşluk vererek içeri toplarız */
+      background-color: white;
+    }
 
-  .nav-item {
-    flex: 0 0 50%; /* Her bir item tam olarak genişliğin yarısını kaplar */
-    justify-content: flex-start; /* İçeriği kendi içinde sola/merkeze yaklaştırır */
-    padding-left: 15%; /* Yazıları biraz daha merkeze çekmek için (görseldeki gibi) */
-    font-size: 0.95rem;
-    gap: 10px;
-  }
+    .nav-item {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start; /* İçeriği kendi kutusunda sola yaslar */
+      gap: 10px;
+      padding-left: 20%; /* Metinleri merkeze daha yakın göstermek için */
+    }
 
-  .nav-item img {
-    width: 28px;
-    height: auto;
+    .nav-item img {
+      width: 24px; /* İkon boyutunu sabitleyelim */
+    }
   }
 
   .nav-item span {
@@ -591,6 +593,47 @@ body {
 
   .cat-btn {
     padding: 8px 15px; /* Kategori butonlarını daralt */
+    font-size: 0.8rem;
+  }
+}
+
+/* Mobil Telefon (768px ve altı) */
+@media (max-width: 768px) {
+  .product-categories {
+    display: grid; /* Flex yerine Grid kullanıyoruz */
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* Tam olarak 2 eşit sütun oluşturur */
+    gap: 15px; /* Butonlar arası boşluk */
+    max-width: 400px; /* Çok yayılmaması için genişliği sınırlıyoruz */
+    margin: 30px auto; /* Ortalamak için */
+    padding: 0 20px;
+  }
+
+  .cat-btn {
+    width: 100%; /* Sütunu tam kaplaması için */
+    justify-content: flex-start; /* İçeriği sola yaslamak için */
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    white-space: nowrap; /* Yazıların tek satırda kalmasını sağlar */
+  }
+
+  /* Görseldeki gibi aktif butonun (Pizza) siyah olması için */
+  .cat-btn.active {
+    background: #292929;
+    color: white;
+  }
+}
+
+/* Çok küçük ekranlar için yazı boyutunu biraz daha küçültelim */
+@media (max-width: 380px) {
+  .product-categories {
+    gap: 10px;
+  }
+
+  .cat-btn {
+    padding: 8px 10px;
     font-size: 0.8rem;
   }
 }
