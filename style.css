@@ -99,14 +99,14 @@ body {
 .cta-content h2,
 .cta-content h3 {
   font-family: "Quattrocento", serif; /* Daha klasik ve iştah açıcı başlıklar */
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .nav-item span,
 .hero-btn,
 .cta-btn {
   font-family: "Barlow", sans-serif;
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 0.5px;
 }
 
@@ -171,6 +171,27 @@ body {
 .medium-card-2 {
   flex: 1;
   background-image: url("public/assets/iteration-2/cta/kart-3.png");
+}
+
+/* Kurye kartı başlık ayarları */
+/* Kurye kartı başlık stili */
+.medium-card-2 h3 {
+  font-family: "Barlow", sans-serif;
+  font-weight: 600; /* İnce/Orta arası bir dokunuş */
+  font-size: 1.5rem;
+  color: #292929; /* Varsayılan siyah/gri tonu */
+}
+
+/* "Çoooook" kısmını kırmızı yapma */
+.text-red {
+  color: #ce2829;
+  font-weight: bold; /* Kırmızıyı bir tık daha belirgin yapabilirsin */
+}
+
+/* Geri kalan metin için siyah */
+.text-black {
+  color: #292929; /* Koyu gri/siyah tonu */
+  font-weight: bold; /* İstediğin o ince/orta dokunuş için */
 }
 
 /* Başlık ve Buton Stilleri */
