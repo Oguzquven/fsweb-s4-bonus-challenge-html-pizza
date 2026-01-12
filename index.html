@@ -1,26 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="tr">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./workintech.svg" />
-    <link rel="stylesheet" href="./style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Workintech + 🍕</title>
+    <title>Teknolojik Yemekler - Pizza</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=Quicksand:wght@500;700&family=Satisfy&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
-
   <body>
-    <div id="app">
-      <div>
-        <a href="https://github.com/Workintech/fsweb-s5-bonus-challenge-html-pizza" target="_blank">
-          <img src="./workintech.svg" class="logo" alt="Workintech logo">
-        </a>
-        <h1>Hello Coder!</h1>
-        <p class="read-the-docs">
-          Click on the Workintech logo to see the Readme of the project
-        </p>
-      </div>
-    </div>
-  </body>
+    <header class="hero-section">
+      <div class="hero-container">
+        <img
+          src="./public/assets/iteration-1/logo.svg"
+          alt="Teknolojik Yemekler"
+          class="main-logo"
+        />
 
+        <div class="hero-content">
+          <p class="hero-subtitle">fırsatı kaçırma</p>
+          <h1>KOD ACIKTIRIR<br />PİZZA DOYURUR</h1>
+          <button class="hero-btn">ACIKTIM</button>
+        </div>
+      </div>
+    </header>
+
+    <nav class="category-nav">
+      <div class="nav-item">
+        <img src="./public/assets/iteration-2/icons/1.svg" alt="Kore" />
+        <span>YENİ! Kore</span>
+      </div>
+      <div class="nav-item active">
+        <img src="./public/assets/iteration-2/icons/2.svg" alt="Pizza" />
+        <span>Pizza</span>
+      </div>
+      <div class="nav-item">
+        <img src="./public/assets/iteration-2/icons/3.svg" alt="Burger" />
+        <span>Burger</span>
+      </div>
+      <div class="nav-item">
+        <img src="./public/assets/iteration-2/icons/4.svg" alt="Kızartmalar" />
+        <span>Kızartmalar</span>
+      </div>
+      <div class="nav-item">
+        <img src="./public/assets/iteration-2/icons/5.svg" alt="Fast Food" />
+        <span>Fast Food</span>
+      </div>
+      <div class="nav-item">
+        <img src="./public/assets/iteration-2/icons/6.svg" alt="İçecekler" />
+        <span>Gazlı İçecekler</span>
+      </div>
+    </nav>
+    <section class="cta-section">
+      <div class="cta-container">
+        <div class="cta-card big-card">
+          <div class="cta-content">
+            <h2>
+              Özel <br />
+              Lezzetler
+            </h2>
+            <p>Position: Absolute Acı Pizza</p>
+            <button class="cta-btn">SİPARİŞ VER</button>
+          </div>
+        </div>
+
+        <div class="cta-right">
+          <div class="cta-card medium-card-1">
+            <div class="cta-content">
+              <h3>
+                Hackathlon <br />
+                Burger Menü
+              </h3>
+              <button class="cta-btn">SİPARİŞ VER</button>
+            </div>
+          </div>
+          <div class="cta-card medium-card-2">
+            <div class="cta-content">
+              <h3>
+                <span>Çoooook</span> hızlı <br />
+                npm gibi kurye
+              </h3>
+              <button class="cta-btn">SİPARİŞ VER</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
