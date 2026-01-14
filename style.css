@@ -1,12 +1,12 @@
 :root {
-  --main-red: #ce2829; /* Ana kırmızı */
-  --main-yellow: #fdc913; /* Buton sarısı */
-  --dark-grey: #292929; /* Footer ve metinler */
-  --light-grey: #fafafa; /* Arka planlar */
+  --main-red: #ce2829;
+  --main-yellow: #fdc913;
+  --dark-grey: #292929;
+  --light-grey: #fafafa;
 }
 
 body {
-  font-family: "Barlow", sans-serif; /* Varsayılan olarak Barlow */
+  font-family: "Barlow", sans-serif;
 }
 
 * {
@@ -16,8 +16,6 @@ body {
   font-family: "Barlow", sans-serif;
 }
 
-/* Hero Section Genel Ayarlar */
-/* Hero alanındaki içeriği tam ortalamak için */
 .hero-section {
   background-image: url("public/assets/iteration-1/home-banner.png");
   background-color: var(--main-red);
@@ -27,20 +25,19 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start; /* Logoyu yukarıda tutmak için */
+  justify-content: flex-start;
   padding-top: 60px;
 }
 
-/* Navigasyon ikonlarını yan yana dizmek için */
 .category-nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 40px; /* İkonlar arası boşluk */
+  gap: 40px;
   padding: 20px 0;
   background-color: white;
   border-bottom: 1px solid #eee;
-  flex-wrap: wrap; /* Mobilde aşağı kaysınlar */
+  flex-wrap: wrap;
 }
 
 .nav-item {
@@ -55,7 +52,7 @@ body {
 }
 
 .nav-item:hover {
-  color: var(--main-red); /* Üstüne gelince kırmızı olsun */
+  color: var(--main-red);
 }
 
 .nav-item img {
@@ -66,12 +63,12 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 40px; /* Yazılarla arasını tasarım gibi açalım */
-  width: 280px; /* Tasarıma göre biraz küçülttük */
+  margin-bottom: 40px;
+  width: 280px;
 }
 
 .hero-subtitle {
-  font-family: "Satisfy", cursive; /* El yazısı slogan */
+  font-family: "Satisfy", cursive;
   color: var(--main-yellow);
   font-size: 1.8rem;
   margin-bottom: 5px;
@@ -81,16 +78,16 @@ body {
 .hero-content {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Yazı ve butonu yatayda merkeze çeker */
-  text-align: center; /* Satırları kendi içinde ortalar */
-  color: white; /* Yazıların beyaz olması için */
+  align-items: center;
+  text-align: center;
+  color: white;
 }
 
 .hero-content h1 {
-  font-family: "Barlow", sans-serif; /* Projenin ana fontu */
-  font-weight: 400; /* Kalın font ağırlığı */
-  font-size: 4rem; /* Boyutu biraz küçülttük */
-  color: #ffffff; /* İstediğin beyaz renk */
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-size: 4rem;
+  color: #ffffff;
   line-height: 1.1;
   text-align: center;
   margin-bottom: 30px;
@@ -98,7 +95,7 @@ body {
 
 .cta-content h2,
 .cta-content h3 {
-  font-family: "Quattrocento", serif; /* Daha klasik ve iştah açıcı başlıklar */
+  font-family: "Quattrocento", serif;
   font-weight: 400;
 }
 
@@ -110,7 +107,6 @@ body {
   letter-spacing: 0.5px;
 }
 
-/* Buton Tasarımı */
 .hero-btn {
   background-color: var(--main-yellow);
   border: none;
@@ -151,7 +147,7 @@ body {
 }
 
 .big-card {
-  flex: 1.2; /* Sol taraf biraz daha geniş */
+  flex: 1.2;
   background-image: url("public/assets/iteration-2/cta/kart-1.png");
   min-height: 450px;
 }
@@ -173,28 +169,23 @@ body {
   background-image: url("public/assets/iteration-2/cta/kart-3.png");
 }
 
-/* Kurye kartı başlık ayarları */
-/* Kurye kartı başlık stili */
 .medium-card-2 h3 {
   font-family: "Barlow", sans-serif;
-  font-weight: 600; /* İnce/Orta arası bir dokunuş */
+  font-weight: 600;
   font-size: 1.5rem;
-  color: #292929; /* Varsayılan siyah/gri tonu */
+  color: #292929;
 }
 
-/* "Çoooook" kısmını kırmızı yapma */
 .text-red {
   color: #ce2829;
-  font-weight: bold; /* Kırmızıyı bir tık daha belirgin yapabilirsin */
+  font-weight: bold;
 }
 
-/* Geri kalan metin için siyah */
 .text-black {
-  color: #292929; /* Koyu gri/siyah tonu */
-  font-weight: bold; /* İstediğin o ince/orta dokunuş için */
+  color: #292929;
+  font-weight: bold;
 }
 
-/* Başlık ve Buton Stilleri */
 .cta-content h2 {
   font-size: 3.5rem;
   margin-bottom: 10px;
@@ -223,7 +214,7 @@ body {
 }
 
 .products-section {
-  background-color: #faf7f2; /* Sayfa arka plan rengi */
+  background-color: #faf7f2;
   padding: 80px 20px;
   text-align: center;
 }
@@ -248,13 +239,13 @@ body {
 }
 
 .cat-btn.active {
-  background: #292929; /* Siyah arka plan */
+  background: #292929;
   color: white;
 }
 
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 kart yan yana */
+  grid-template-columns: repeat(3, 1fr);
   gap: 25px;
   max-width: 1100px;
   margin: 40px auto;
@@ -265,11 +256,11 @@ body {
   background-color: #ffffff;
   padding: 25px;
   border-radius: 20px;
-  text-align: left; /* Yazılar sola */
+  text-align: left;
   transition: transform 0.3s ease;
 }
 .product-card img {
-  width: 100%; /* Resim kartı kaplasın */
+  width: 100%;
   height: auto;
   margin-bottom: 20px;
 }
@@ -294,8 +285,8 @@ body {
 }
 
 .reviews {
-  color: #5f5f5f; /* Daha soluk bir gri */
-  flex-grow: 1; /* Bu, fiyatı en sağa itmek için boşluğu kaplar */
+  color: #5f5f5f;
+  flex-grow: 1;
 }
 
 .price {
@@ -306,7 +297,7 @@ body {
 
 .product-info {
   display: flex;
-  justify-content: space-between; /* Puanları sola, fiyatı sağa iter */
+  justify-content: space-between;
   align-items: center;
   margin-top: 15px;
   font-weight: bold;
@@ -317,40 +308,37 @@ body {
 }
 
 .section-subtitle {
-  font-family: "Satisfy", cursive; /* Proje bilgilerindeki el yazısı fontu */
-  color: #ce2829; /* Proje kırmızı rengi */
-  font-size: 2rem; /* Boyutu 1.5rem'den 2rem'e çıkardık */
+  font-family: "Satisfy", cursive;
+  color: #ce2829;
+  font-size: 2rem;
   margin-bottom: 5px;
   text-align: center;
   font-weight: 400;
 }
 
 .section-title {
-  font-family: "Barlow", sans-serif; /* Proje ana fontu */
-  color: #292929; /* Proje koyu gri rengi */
-  font-size: 2.8rem; /* Biraz daha vurgulu hale getirdik */
+  font-family: "Barlow", sans-serif;
+  color: #292929;
+  font-size: 2.8rem;
   font-weight: 600;
   margin-top: 0;
   margin-bottom: 40px;
   text-align: center;
 }
 
-/* CTA Kartlarının olduğu bölüm */
 .cta-section {
-  background-color: #faf7f2; /* Beyaz yerine ürünler kısmıyla aynı bej rengi yaptık */
-  padding: 60px 0 20px 0; /* Alttan boşluğu biraz azalttık ki geçiş akıcı olsun */
+  background-color: #faf7f2;
+  padding: 60px 0 20px 0;
 }
 
-/* Ürünlerin olduğu bölüm */
 .products-section {
-  background-color: #faf7f2; /* Zaten bu renkteydi, koruyoruz */
-  padding: 40px 0 80px 0; /* Üstten boşluğu dengeledik */
+  background-color: #faf7f2;
+  padding: 40px 0 80px 0;
   text-align: center;
 }
 
-/* Footer Genel Ayarları */
 .main-footer {
-  background-color: #292929; /* Proje koyu gri rengi */
+  background-color: #292929;
   color: white;
   padding: 80px 0 0 0;
   font-family: "Barlow", sans-serif;
@@ -361,19 +349,16 @@ body {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  /* Başlıkların alt hizasını dengelemek için ekledik */
   align-items: flex-start;
   padding: 0 20px 60px 20px;
 }
 
-/* Teknolojik Yemekler Logosuna Özel Dokunuş */
 .footer-logo {
   font-family: "Roboto Condensed", sans-serif;
   font-weight: 700;
   font-size: 2.8rem;
-  line-height: 0.9; /* Yazıyı birbirine yaklaştırarak tasarıma benzetiyoruz */
+  line-height: 0.9;
   margin-bottom: 30px;
-  /* Başlık Hot Menu ile aynı hizada başlasın istersen padding ile itebilirsin */
   padding-top: 10px;
 }
 
@@ -392,7 +377,7 @@ body {
 
 .footer-section h4 {
   font-size: 1.2rem;
-  margin-top: 15px; /* Logonun yüksekliğini dengelemek için yukarıdan boşluk verdik */
+  margin-top: 15px;
   margin-bottom: 35px;
 }
 
@@ -406,7 +391,6 @@ body {
   color: #ffffff;
 }
 
-/* Instagram Görselleri */
 .insta-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -419,10 +403,8 @@ body {
   border-radius: 8px;
 }
 
-/* Alt Çizgi ve Telif */
-/* Footer Alt Kısım */
 .footer-bottom {
-  border-top: 1px solid #444; /* İnce gri çizgi */
+  border-top: 1px solid #444;
   padding: 25px 0;
   background-color: #292929;
 }
@@ -431,7 +413,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between; /* Yazıyı sola, ikonu sağa iter */
+  justify-content: space-between;
   align-items: center;
   padding: 0 20px;
 }
@@ -444,79 +426,65 @@ body {
 }
 
 .social-links a:hover {
-  color: #fdc913; /* Üstüne gelince sarı olsun */
+  color: #fdc913;
 }
 
-/* --- RESPONSIVE TASARIM (Media Queries) --- */
-
-/* Tablet ve Küçük Masaüstü (992px altı) */
 @media (max-width: 992px) {
   .hero-content h1 {
-    font-size: 3rem; /* Başlığı biraz küçültelim */
+    font-size: 3rem;
   }
 
   .cta-container {
-    flex-direction: column; /* CTA kartlarını alt alta al */
+    flex-direction: column;
     gap: 20px;
   }
 
   .cta-right {
-    flex-direction: column; /* Sağdaki iki küçük kartı da alt alta al */
+    flex-direction: column;
   }
 
   .product-grid {
-    grid-template-columns: repeat(2, 1fr); /* Tablette 2 sütun yap */
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 768px) {
-  /* Arka plan resminin mobilde daha iyi oturması için */
   .hero-section {
     padding-top: 40px;
-    /* Pizzanın butonun altında kalması için arka planı biraz aşağı itelim */
     background-position: center 80%;
   }
 
-  /* Logoyu küçültelim ki içerik yukarı çıksın */
   .main-logo {
     width: 180px;
     margin-bottom: 20px;
   }
 
-  /* "fırsatı kaçırma" yazısı */
   .hero-subtitle {
     font-size: 1.2rem;
   }
 
-  /* Ana Başlık: En önemli kısım burası */
   .hero-content h1 {
-    /* Yazı fontunu mobilde uygun boyuta çekiyoruz */
     font-size: 3rem;
     line-height: 1.1;
     text-align: center;
-
-    /* Kelimelerin alt alta gelmesini sağlamak için genişliği daraltıyoruz */
     max-width: 200px;
-    margin: 0 auto 30px auto; /* Ortalamak ve alttan boşluk bırakmak için */
-
-    /* Kelimelerin düzgün bölünmesi için */
+    margin: 0 auto 30px auto;
     display: block;
-    word-spacing: 100vw; /* Her kelimeyi yeni satıra zorlar */
+    word-spacing: 100vw;
   }
 
-  /* Butonun pizza üzerinde kaybolmaması için */
   .hero-btn {
     padding: 10px 30px;
     font-size: 0.9rem;
-    z-index: 10; /* Üstte kalmasını garantiler */
+    z-index: 10;
   }
 }
-/* Mobil Telefon (768px ve altı) */
+
 @media (max-width: 768px) {
   /* Hero Alanı */
   .hero-section {
     padding-top: 40px;
-    min-height: 80vh; /* Mobilde çok uzun kalmasın */
+    min-height: 80vh;
   }
 
   .hero-content h1 {
@@ -524,37 +492,35 @@ body {
     padding: 0 10px;
   }
 
-  /* Kategori Navigasyonu (İkonlar) */
   @media (max-width: 768px) {
     .category-nav {
       display: grid;
-      /* Ekranı tam ortadan ikiye böler (eşit sütunlar) */
       grid-template-columns: 1fr 1fr;
       gap: 20px;
-      padding: 30px 40px; /* Kenarlardan biraz boşluk vererek içeri toplarız */
+      padding: 30px 40px;
       background-color: white;
     }
 
     .nav-item {
       display: flex;
       align-items: center;
-      justify-content: flex-start; /* İçeriği kendi kutusunda sola yaslar */
+      justify-content: flex-start;
       gap: 10px;
-      padding-left: 20%; /* Metinleri merkeze daha yakın göstermek için */
+      padding-left: 20%;
     }
 
     .nav-item img {
-      width: 24px; /* İkon boyutunu sabitleyelim */
+      width: 24px;
     }
   }
 
   .nav-item span {
-    font-size: 0.9rem; /* Yazıları mobilde küçültelim */
+    font-size: 0.9rem;
   }
 
   /* Ürün Gridi */
   .product-grid {
-    grid-template-columns: 1fr; /* Mobilde her ürün tek satır kaplasın */
+    grid-template-columns: 1fr;
     padding: 0 20px;
   }
 
@@ -563,70 +529,59 @@ body {
     margin: 0 auto;
   }
 
-  /* Footer Alanı */
   .footer-container {
-    flex-direction: column; /* Bölümleri alt alta diz */
-    align-items: flex-start; /* Figma tasarımındaki gibi sola hizala */
+    flex-direction: column;
+    align-items: flex-start;
     gap: 40px;
     padding-left: 30px;
   }
 
   .insta-grid {
-    grid-template-columns: repeat(
-      3,
-      80px
-    ); /* Insta resimlerini mobilde küçült */
+    grid-template-columns: repeat(3, 80px);
   }
 
   .footer-bottom .bottom-container {
-    flex-direction: column; /* Telif ve Twitter'ı alt alta al */
+    flex-direction: column;
     gap: 15px;
     text-align: center;
   }
 }
 
-/* Çok Küçük Ekranlar (480px altı) */
 @media (max-width: 480px) {
   .section-title {
-    font-size: 1.8rem; /* "Acıktıran Kodlara..." başlığını küçült */
+    font-size: 1.8rem;
   }
 
   .cat-btn {
-    padding: 8px 15px; /* Kategori butonlarını daralt */
+    padding: 8px 15px;
     font-size: 0.8rem;
   }
 }
 
-/* Mobil Telefon (768px ve altı) */
 @media (max-width: 768px) {
   .product-categories {
-    display: grid; /* Flex yerine Grid kullanıyoruz */
-    grid-template-columns: repeat(
-      2,
-      1fr
-    ); /* Tam olarak 2 eşit sütun oluşturur */
-    gap: 15px; /* Butonlar arası boşluk */
-    max-width: 400px; /* Çok yayılmaması için genişliği sınırlıyoruz */
-    margin: 30px auto; /* Ortalamak için */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    max-width: 400px;
+    margin: 30px auto;
     padding: 0 20px;
   }
 
   .cat-btn {
-    width: 100%; /* Sütunu tam kaplaması için */
-    justify-content: flex-start; /* İçeriği sola yaslamak için */
+    width: 100%;
+    justify-content: flex-start;
     padding: 10px 15px;
     font-size: 0.9rem;
-    white-space: nowrap; /* Yazıların tek satırda kalmasını sağlar */
+    white-space: nowrap;
   }
 
-  /* Görseldeki gibi aktif butonun (Pizza) siyah olması için */
   .cat-btn.active {
     background: #292929;
     color: white;
   }
 }
 
-/* Çok küçük ekranlar için yazı boyutunu biraz daha küçültelim */
 @media (max-width: 380px) {
   .product-categories {
     gap: 10px;
