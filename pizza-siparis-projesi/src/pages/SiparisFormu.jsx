@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import Footer from "../components/Footer";
 
 function SiparisFormu() {
   const navigate = useNavigate();
@@ -129,29 +130,51 @@ function SiparisFormu() {
       </header>
 
       <div className="siparis-container">
-        <h2>Position Absolute Acı Pizza</h2>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            marginBottom: "10px",
-          }}
-        >
-          <p style={{ fontSize: "28px", fontWeight: "bold" }}>85.50₺</p>
-          <div style={{ display: "flex", gap: "10px", color: "#5F5F5F" }}>
-            <span>4.9</span>
-            <span>(200)</span>
-          </div>
+        {/* Pizza Image */}
+        <div className="pizza-image-container">
+          <img
+            src="/assets/iteration-2/pictures/form-banner.png"
+            alt="Position Absolute Acı Pizza"
+            className="pizza-main-image"
+          />
         </div>
-        <p style={{ color: "#5F5F5F", marginBottom: "30px" }}>
-          Frontend Dev olarak hala position:absolute kullanıyorsan bu çok acı
-          pizza tam sana göre. Pizza, domates, peynir ve genellikle çeşitli
-          diğer malzemelerle kaplanmış, daha sonra geleneksel olarak odun
-          ateşinde bir fırında yüksek sıcaklıkta pişirilen, genellikle yuvarlak,
-          düzleştirilmiş mayalı buğday bazlı hamurdan oluşan İtalyan kökenli
-          lezzetli bir yemektir. Küçük bir pizzaya bazen pizzetta denir.
-        </p>
+
+        {/* Pizza Info Box */}
+        <div className="pizza-info-box">
+          <div className="breadcrumb-small">
+            <span>Anasayfa - </span>
+            <span style={{ fontWeight: "bold" }}>Sipariş Oluştur</span>
+          </div>
+
+          <h2>Position Absolute Acı Pizza</h2>
+
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              margin: "15px 0",
+            }}
+          >
+            <p style={{ fontSize: "28px", fontWeight: "bold", margin: 0 }}>
+              85.50₺
+            </p>
+            <div style={{ display: "flex", gap: "10px", color: "#5F5F5F" }}>
+              <span>4.9</span>
+              <span>(200)</span>
+            </div>
+          </div>
+
+          <p style={{ color: "#5F5F5F", margin: 0, lineHeight: "1.6" }}>
+            Frontend Dev olarak hala position:absolute kullanıyorsan bu çok acı
+            pizza tam sana göre. Pizza, domates, peynir ve genellikle çeşitli
+            diğer malzemelerle kaplanmış, daha sonra geleneksel olarak odun
+            ateşinde bir fırında yüksek sıcaklıkta pişirilen, genellikle
+            yuvarlak, düzleştirilmiş mayalı buğday bazlı hamurdan oluşan İtalyan
+            kökenli lezzetli bir yemektir. Küçük bir pizzaya bazen pizzetta
+            denir.
+          </p>
+        </div>
 
         <form onSubmit={handleSubmit}>
           {/* İsim - EN BAŞTA */}
@@ -170,9 +193,11 @@ function SiparisFormu() {
           {/* Boyut ve Hamur */}
           <div className="boyut-hamur-container">
             <div className="form-group">
-              <label>Boyut Seç *</label>
+              <label>
+                Boyut Seç <span style={{ color: "red" }}>*</span>
+              </label>
               <div className="radio-group">
-                <label>
+                <label className="radio-label">
                   <input
                     type="radio"
                     name="boyut"
@@ -180,9 +205,9 @@ function SiparisFormu() {
                     onChange={handleInputChange}
                     checked={formData.boyut === "Küçük"}
                   />
-                  Küçük
+                  <span className="radio-text">S</span>
                 </label>
-                <label>
+                <label className="radio-label">
                   <input
                     type="radio"
                     name="boyut"
@@ -190,9 +215,9 @@ function SiparisFormu() {
                     onChange={handleInputChange}
                     checked={formData.boyut === "Orta"}
                   />
-                  Orta
+                  <span className="radio-text">M</span>
                 </label>
-                <label>
+                <label className="radio-label">
                   <input
                     type="radio"
                     name="boyut"
@@ -200,20 +225,22 @@ function SiparisFormu() {
                     onChange={handleInputChange}
                     checked={formData.boyut === "Büyük"}
                   />
-                  Büyük
+                  <span className="radio-text">L</span>
                 </label>
               </div>
             </div>
 
             <div className="form-group">
-              <label>Hamur Seç *</label>
+              <label>
+                Hamur Seç <span style={{ color: "red" }}>*</span>
+              </label>
               <select
                 id="size-dropdown"
                 name="hamur"
                 value={formData.hamur}
                 onChange={handleInputChange}
               >
-                <option value="">Hamur Kalınlığı</option>
+                <option value="">—Hamur Kalınlığı Seç—</option>
                 <option value="İnce">İnce</option>
                 <option value="Normal">Normal</option>
                 <option value="Kalın">Kalın</option>
@@ -235,7 +262,7 @@ function SiparisFormu() {
             </p>
             <div className="malzeme-grid">
               {malzemelerListesi.map((malzeme) => (
-                <label key={malzeme}>
+                <label key={malzeme} className="checkbox-label">
                   <input
                     type="checkbox"
                     name={malzeme}
@@ -247,6 +274,7 @@ function SiparisFormu() {
                       formData.malzemeler.length >= 10
                     }
                   />
+                  <span className="checkbox-custom"></span>
                   {malzeme}
                 </label>
               ))}
@@ -375,6 +403,7 @@ function SiparisFormu() {
           </div>
         </form>
       </div>
+      <Footer />
     </div>
   );
 }
