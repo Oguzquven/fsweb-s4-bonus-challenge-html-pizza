@@ -91,12 +91,12 @@ function SiparisFormu() {
     // API'ye POST isteği
     try {
       const response = await axios.post(
-        "https://reqres.in/api/pizza",
+        "https://reqres.in/api/workintech",
         formData,
       );
       console.log("Sipariş başarılı:", response.data);
     } catch (error) {
-      console.log("API hatası (beklenen):", error.message);
+      console.log("API hatası:", error.message);
     }
 
     // Hata olsa da sipariş onay sayfasına git
