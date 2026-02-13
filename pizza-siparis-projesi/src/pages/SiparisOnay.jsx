@@ -1,5 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
+import Footer from "../components/Footer";
 
 function SiparisOnay() {
   const location = useLocation();
@@ -16,6 +17,7 @@ function SiparisOnay() {
       <div className="onay-content">
         <h2>TEBRİKLER! SİPARİŞİNİZ ALINDI!</h2>
       </div>
+      <Footer />
     </div>
   );
 }
