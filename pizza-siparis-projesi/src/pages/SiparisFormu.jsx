@@ -75,9 +75,30 @@ function SiparisFormu() {
       return;
     }
 
+    // Boyut dönüşümü: Küçük→S, Orta→M, Büyük→L
+    const boyutKisaltma = {
+      Küçük: "S",
+      Orta: "M",
+      Büyük: "L",
+    };
+
+    // Malzeme fiyatı hesapla
+    const malzemeFiyat = formData.malzemeler.length * 5;
+    const toplamFiyat = (85.5 + malzemeFiyat) * formData.adet;
+
+    // Gönderilecek veriyi hazırla
+    const siparisVerisi = {
+      isim: "Position Absolute Acı Pizza",
+      boyut: boyutKisaltma[formData.boyut],
+      hamur: formData.hamur,
+      malzemeler: formData.malzemeler,
+      secimlerFiyat: malzemeFiyat * formData.adet,
+      toplamFiyat: toplamFiyat,
+    };
+
     try {
       const response = await axios.post(
-        "https://reqres.in/api/workintech  ",
+        "https://reqres.in/api/workintech",
         formData,
       );
       console.log("Sipariş başarılı:", response.data);
@@ -85,7 +106,12 @@ function SiparisFormu() {
       console.log("API hatası:", error.message);
     }
 
-    navigate("/siparis-onay", { state: { siparis: formData } });
+    // State ile birlikte gönder
+    navigate("/siparis-onay", {
+      state: {
+        siparis: siparisVerisi,
+      },
+    });
   };
 
   const malzemeFiyat = formData.malzemeler.length * 5;
@@ -184,6 +210,7 @@ function SiparisFormu() {
                     onChange={handleInputChange}
                   >
                     <option value="">—Hamur Kalınlığı Seç—</option>
+                    <option value="Süpper İnce">Süpper İnce</option>
                     <option value="İnce">İnce</option>
                     <option value="Normal">Normal</option>
                     <option value="Kalın">Kalın</option>
