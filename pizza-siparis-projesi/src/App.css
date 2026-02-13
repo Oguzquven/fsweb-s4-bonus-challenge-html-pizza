@@ -344,80 +344,75 @@ body {
   margin-top: 15px;
 }
 
-/* Checkbox'lar - FIGMA'DAKİ GİBİ (ayrı kutular) */
+/* Ana kapsayıcı */
 .checkbox-label {
   display: flex;
   align-items: center;
   cursor: pointer;
-  font-weight: 500;
-  font-size: 14px;
-  color: #292929;
-  position: relative;
-  padding: 0; /* Padding kaldırıldı */
-  background-color: transparent; /* Arka plan kaldırıldı */
-  border: none; /* Border kaldırıldı */
-  transition: all 0.2s;
+  font-weight: 600; /* Biraz daha kalın görünmesi için */
+  font-size: 16px; /* Görsele uygun boyut */
+  color: #4a4a4a; /* Yazı rengi */
+  margin-bottom: 15px;
+  transition: opacity 0.2s;
+  user-select: none;
 }
 
 .checkbox-label:hover {
   opacity: 0.8;
 }
 
+/* Gizli asıl input */
 .checkbox-label input[type="checkbox"] {
   position: absolute;
   opacity: 0;
+  cursor: pointer;
 }
 
-/* Checkbox custom - Figma'daki gibi ayrı kare */
+/* Özelleştirilmiş Kare Kutu (Checkbox-Custom) */
 .checkbox-custom {
-  width: 40px;
-  height: 40px;
-  border: 2px solid #e0e0e0;
-  border-radius: 8px;
-  background-color: #fff8f0; /* Krem rengi - radio butonlarla aynı */
-  margin-right: 12px;
+  width: 44px; /* Görseldeki genişlik hissiyatı */
+  height: 44px;
+  background-color: #faf7f2; /* Krem rengi arka plan */
+  border-radius: 8px; /* Yumuşatılmış köşeler */
+  margin-right: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  transition: all 0.2s;
+  transition: all 0.2s ease;
 }
 
-/* Seçili checkbox'ta sarı arka plan */
-.checkbox-label.selected .checkbox-custom {
-  background-color: #fdc913; /* Sarı */
-  border-color: #fdc913;
-}
-
+/* Tik İşareti (SVG veya Unicode) */
 .checkbox-custom::after {
   content: "✓";
-  color: #292929; /* Siyah tik */
-  font-size: 20px;
-  font-weight: bold;
+  color: #292929;
+  font-size: 22px;
+  font-weight: 900;
   display: none;
 }
 
-.checkbox-label.selected .checkbox-custom::after {
+/* SEÇİLİ DURUM (Checked) */
+/* Sadece kutunun rengi değişiyor */
+.checkbox-label input[type="checkbox"]:checked + .checkbox-custom {
+  background-color: #fdc913; /* Canlı Sarı */
+}
+
+/* Seçili olduğunda tiki göster */
+.checkbox-label input[type="checkbox"]:checked + .checkbox-custom::after {
   display: block;
 }
 
-.checkbox-label:has(input[type="checkbox"]:disabled) {
-  opacity: 0.4;
+/* Metin Alanı (Sağ taraf) */
+.checkbox-text {
+  /* Görselde metnin arkasında kutu yok, sadece yazı var */
+  background-color: transparent;
+  padding: 0;
+}
+
+/* Disabled Durumu */
+.checkbox-label input[type="checkbox"]:disabled + .checkbox-custom {
+  background-color: #eeeeee;
   cursor: not-allowed;
-}
-
-/* Malzeme ismi için ayrı stil */
-.checkbox-label span:last-child {
-  background-color: #fff8f0; /* Krem rengi */
-  padding: 10px 15px;
-  border-radius: 8px;
-  flex: 1;
-  border: 2px solid transparent;
-  transition: all 0.2s;
-}
-
-.checkbox-label.selected span:last-child {
-  background-color: #fdc913; /* Sarı */
 }
 
 .tick {
